@@ -121,7 +121,7 @@
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Create account">
+						<input class="full-width has-padding" id="createAccountBtn" type="submit" value="Create account">
 					</p>
 				</form>
 
@@ -155,26 +155,44 @@
 		<!-- cd-user-modal-container -->
 	</div>
 	<!-- cd-user-modal -->
-<br>
+	<br>
 	<!-- US Map -->
 	<p>Exploring the United States just got easier.</p>
 	<p>Pick your destination.</p>
-<br>
+	<br>
 
 	<!-- US Map -->
 	<div id="map"></div>
 
 
-<!-- jQuery -->
-<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
 
-<!-- JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+	<!-- JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
 
-<script src="assets/js/index.js"></script>
+	<script src="assets/js/index.js"></script>
 
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyCQfMa2wYIxP9sFkvgwO-JA7gMn5pqXc8w",
+			authDomain: "travi-main.firebaseapp.com",
+			databaseURL: "https://travi-main.firebaseio.com",
+			projectId: "travi-main",
+			storageBucket: "travi-main.appspot.com",
+			messagingSenderId: "327915074488"
+		};
+		firebase.initializeApp(config);
+	</script>
+	
+	<!-- Logic For Authentication Logic -->
+	<script src="assets/js/authentication.js"></script>
 </body>
 
 
