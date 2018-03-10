@@ -33,7 +33,11 @@
     border-collapse: collapse;
     width: 100%;
     text-align: center;
-    overflow: auto;
+}
+
+.table-title {
+    background:#712081;
+    color: white;
 }
 
 .table-title, 
@@ -53,7 +57,8 @@
     margin: 0 auto;
     margin-top: 1%;
     height: 300px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-family: "PT Sans", sans-serif;
 
 }   
@@ -65,7 +70,9 @@
 }
 
 .dest-title {
-    position: sticky;
+    /* position: fixed; */
+    background:#712081;
+    color: white;
 }
 
 .dest-title, 
@@ -73,6 +80,34 @@
     padding: 8px;
     /* border-bottom: 1px solid #ddd; */
 }
+
+
+ul {
+    list-style-type: none;
+}
+
+
+.dest-title {
+    padding: 8px;
+    background: #555;
+    color: #f1f1f1;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+
 
 
 
