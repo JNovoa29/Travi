@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<title>Responsive Login/Signup Modal Window</title>
+	<title>Travi</title>
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -22,7 +22,7 @@
 
 	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-
+	
 	<script src="USmap/mapdata.js"></script>
 	<script src="USmap/usmap.js"></script>
 
@@ -64,23 +64,25 @@
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signin-email">E-mail</label>
 						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
+						<span class="cd-error-message emailTaken">Sorry, we couldn't find a user with that email. Please check your username and try again!</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signin-password">Password</label>
 						<input class="full-width has-padding has-border" id="signin-password" type="text" placeholder="Password">
 						<a href="#0" class="hide-password">Hide</a>
-						<span class="cd-error-message">Error message here!</span>
+						<span class="cd-error-message">Sorry, the email and password do not match, please check your email and password and try again</span>
 					</p>
 
 					<p class="fieldset">
 						<input type="checkbox" id="remember-me" checked>
 						<label for="remember-me">Remember me</label>
+
+
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width" type="submit" value="Login">
+						<input class="full-width" id="loginBtn"type="submit" value="Login">
 					</p>
 				</form>
 
