@@ -1,3 +1,4 @@
+/* image banner with current state  */
 .banner {
     /* background-image: ; */
     background: white;
@@ -14,24 +15,99 @@
     font-weight: bold;
 }
 
+/* container for the event table */
 .events {
     background: white;
     border: 4px solid white;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 6%;
+    padding: 1%;
     margin: 0 auto;
     margin-top: 1%;
+    font-family: "PT Sans", sans-serif;
+
 }
 
+/* event table */
+#event-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.table-title {
+    background:#712081;
+    color: white;
+}
+
+.table-title, 
+.event-info {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* container for the destination profile table */
 .destination {
     background: white;
     border: 4px solid white;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 6%;
+    padding: 1%;
     margin: 0 auto;
     margin-top: 1%;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: "PT Sans", sans-serif;
+
+}   
+
+#dest-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
 }
+
+.dest-title {
+    /* position: fixed; */
+    background:#712081;
+    color: white;
+}
+
+.dest-title, 
+.dest-item {
+    padding: 8px;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+.dest-title {
+    padding: 8px;
+    background: #555;
+    color: #f1f1f1;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+
+
 
 
