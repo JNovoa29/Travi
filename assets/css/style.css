@@ -494,6 +494,11 @@ xsigin/signup popup
   }
 }
 
+.error-msg {
+  font-size: 100%;
+  color: red;
+}
+
 #cd-login, #cd-signup, #cd-reset-password {
   display: none;
 }

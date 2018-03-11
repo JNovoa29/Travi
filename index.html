@@ -39,7 +39,8 @@
 		<nav class="main-nav">
 			<ul>
 				<li>
-					<a class="cd-signin" href="#0">Log in | Sign up</a>
+					<a class="cd-signin" id="cd-login" href="#0">Log in | Sign up</a>
+					<a class="cd-signin hide" id="cd-logout" href="#">Log Out</a>
 				</li>
 			</ul>
 		</nav>
@@ -61,6 +62,7 @@
 			<div id="cd-login">
 				<!-- Log in form -->
 				<form class="cd-form">
+					<p class="error-msg" id="login-error"></p>
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signin-email">E-mail</label>
 						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
@@ -96,6 +98,7 @@
 			<div id="cd-signup">
 				<!-- sign up form -->
 				<form class="cd-form">
+					<p class="error-msg" id="signup-error"></p>
 					<p class="fieldset">
 						<label class="image-replace cd-username" for="signup-username">Username</label>
 						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
