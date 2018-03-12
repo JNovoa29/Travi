@@ -63,26 +63,7 @@
                         <th class="table-title">Location</th>
                         <th class="table-title">Date</th>
                     </tr>
-                    <tr>
-                        <td class="event-name event-info">
-                            <ul>
-                                <li id="event-title">item</li>
-                            </ul>
-                        </td>
-
-                        <td class="location-name event-info">
-                            <ul>
-                                <li id="location-title">item</li>
-                            </ul>
-                        </td>
-
-                        <td class="date event-info">
-                            <ul>
-                                <li id="event-date">item</li>
-                            </ul>
-                        </td>
-
-                    </tr>
+                        <tbody id="events"></tbody>
                 </table>
             </div>
         </div>
@@ -91,30 +72,27 @@
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>
 
-<!-- JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCQfMa2wYIxP9sFkvgwO-JA7gMn5pqXc8w",
+        authDomain: "travi-main.firebaseapp.com",
+        databaseURL: "https://travi-main.firebaseio.com",
+        projectId: "travi-main",
+        storageBucket: "travi-main.appspot.com",
+        messagingSenderId: "327915074488"
+    };
+    firebase.initializeApp(config);
+    </script>
 
-<script src="assets/js/index.js"></script>
+<!-- Logic For Authentication Logic -->
+<script src="assets/js/authentication.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-	<script>
-        // Initialize Firebase
-		var config = {
-            apiKey: "AIzaSyCQfMa2wYIxP9sFkvgwO-JA7gMn5pqXc8w",
-			authDomain: "travi-main.firebaseapp.com",
-			databaseURL: "https://travi-main.firebaseio.com",
-			projectId: "travi-main",
-			storageBucket: "travi-main.appspot.com",
-			messagingSenderId: "327915074488"
-		};
-		firebase.initializeApp(config);
-        </script>
-	
-	<!-- Logic For Authentication Logic -->
-	<script src="assets/js/authentication.js"></script>
+<script src="assets/js/style2.js"></script>
 
-    <script src="assets/js/style2.js"></script>
+<script src="assets/js/eventbrite.js"></script>
+
 </body>
 
 </html>
