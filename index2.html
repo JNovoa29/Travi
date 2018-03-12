@@ -7,25 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Shrikhand" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
 
     <title>Travi</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-text">
+            Placeholder Navbar
+        </span>
+    </nav>
+
     <div class="container">
         <div class="row">
-            <div class="col-md-1"></div>
+            <!-- <div class="col-md-1"></div> -->
             <div class="banner col-md-10">
-                <p class="current-state">Placeholder Text</p>
+                <p class="current-state">Oregon</p>
             </div>
-            <div class="col-md-1"></div>
+            <!-- <div class="col-md-1"></div> -->
         </div>
-        <div class="row">
-            <div class="destination col-md-3">
+        <!-- <div class="row"> -->
+            <!-- <div class="destination col-md-3"> -->
                 <!-- <div class="dest-title">Destination Profile</div>
                 <div class="dest-profile">Stuff goes in here</div> -->
-                <div class="dest-title">Destination Profile</div>
+                <!-- <div class="dest-title">Destination Profile</div>
                 <table id="dest-table">
                     <tr>
                     </tr>
@@ -55,8 +63,9 @@
                         </td>
                     </tr>
                 </table>
-            </div>
-            <div class="events col-md-8">
+            </div> -->
+
+            <div class="events col-md-12">
                 <table id="event-table">
                     <tr>
                         <th class="table-title">Event</th>
@@ -67,6 +76,21 @@
                 </table>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="w3-content w3-display-container">
+                    <img class="mySlides" src="assets/images/oregonslide1.jpg">
+                    <img class="mySlides" src="assets/images/oregonslide2.jpg">
+                    <img class="mySlides" src="assets/images/oregonslide3.jpg">
+                    <img class="mySlides" src="assets/images/oregonslide4.jpg">
+                    <button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="button-right" onclick="plusDivs(1)">&#10095;</button>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
     	<!-- jQuery -->
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
