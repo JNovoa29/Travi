@@ -18,7 +18,7 @@ $.ajax({
     '<td>' + eventDatetime + '</td>' + 
     '</tr>'
 
-    $('#events').append(addEvent)
+    $('.events').append(addEvent)
   }
   
 
