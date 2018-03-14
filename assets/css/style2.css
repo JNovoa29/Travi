@@ -31,30 +31,34 @@
     margin-top: 1%;
     margin-bottom: 1%;
     font-family: "PT Sans", sans-serif;
-
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto; 
 }
 
 /* event table */
-#event-table {
+.events {
     border-collapse: collapse;
     width: 100%;
-    text-align: center;
+    text-align: center;   
+    table-layout: fixed;
+    word-wrap: break-word; 
 }
 
-.table-title {
+.event-title {
     color: grey;
 }
 
-.table-title, 
+.event-title, 
 .event-info {
     padding: 8px;
     border-bottom: 1px solid #ddd;
 }
 
-ul,
+/* ul,
 li {
     list-style-type: none;
-}
+} */
 
 /* container for the destination profile table */
 /* .destination {
@@ -85,7 +89,7 @@ li {
 .dest-title, 
 .dest-item {
     padding: 8px;
-    /* border-bottom: 1px solid #ddd; */
+    border-bottom: 1px solid #ddd;
 } */
 
 
