@@ -1,6 +1,12 @@
 /* placeholder navbar */
 
 /* image banner with current state  */
+p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .banner {
     background-image: url("../images/oregonbanner.gif");
     background-size: 102%;
@@ -20,7 +26,7 @@
     text-align: center;
 }
 
-/* container for the event table */
+/* event table */
 .events {
     background: white;
     border: 4px solid white;
@@ -33,16 +39,9 @@
     font-family: "PT Sans", sans-serif;
     height: 500px;
     overflow-x: hidden;
-    overflow-y: auto; 
-}
-
-/* event table */
-.events {
-    border-collapse: collapse;
+    overflow-y: auto;
     width: 100%;
-    text-align: center;   
-    table-layout: fixed;
-    word-wrap: break-word; 
+    text-align: left;   
 }
 
 .event-title {
@@ -52,18 +51,11 @@
 .event-title, 
 .event-info {
     padding: 8px;
-    border-bottom: 1px solid #ddd;
 }
-
-/* ul,
-li {
-    list-style-type: none;
-} */
 
 /* image display container */
 
-.w3-content {
-    background: white;
+.slide-display {
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 0 auto;
@@ -85,16 +77,20 @@ li {
 .button-left {
     position: absolute;
     top: 50%;
-    left: 2%;
+    left: 14.1px;
     transform: translate(0%,-50%);
     opacity: .5;
+    width: 30px;
+    height: 35px;
 }
 .button-right {
     position: absolute;
     top: 50%;
-    right: 2%;
+    right: 14.1px;
     transform: translate(0%,-50%);
     opacity: .5;
+    width: 30px;
+    height: 35px;
 }
 
 
