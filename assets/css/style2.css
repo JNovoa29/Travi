@@ -60,40 +60,6 @@ li {
     list-style-type: none;
 } */
 
-/* container for the destination profile table */
-/* .destination {
-    background: white;
-    border: 4px solid white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 1%;
-    margin: 0 auto;
-    margin-top: 1%;
-    height: 300px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    font-family: "PT Sans", sans-serif;
-
-}   
-
-#dest-table {
-    border-collapse: collapse;
-    width: 100%;
-    text-align: left;
-}
-
-.dest-title {
-    color: grey;
-}
-
-.dest-title, 
-.dest-item {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-} */
-
-
-
 /* image display container */
 
 .w3-content {
