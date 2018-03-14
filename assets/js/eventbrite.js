@@ -1,6 +1,14 @@
 var stateName =  sessionStorage.getItem("stateName")
 var apiKey = '&token=6QAW23I6MZ64BNBZ3KGM'
-var queryURL = 'https://www.eventbriteapi.com/v3/events/search/?location.address=' + stateName + + + apiKey
+var queryURL = 'https://www.eventbriteapi.com/v3/events/search/?location.address=' + stateName + apiKey
+
+// convert date time notation from API to more readable date time
+function datetimeConvert(datetime){
+  var date = moment(datetime.split('T')[0], 'YYYY-MM-DD').format('MMM Do, YYYY')
+  var time = moment(datetime.split('T')[1], 'HH:mm:ss').format('h:mm A')
+
+  return date + ' @' + time //return formatted datetime
+}
 
 $.ajax({
   url : queryURL,
@@ -18,10 +26,10 @@ $.ajax({
       eventURL = response.events[i].url
       eventURLText = response.events[i].url
     }
-
+    
     // Add properties to coressponding html columns
     $('.event-name').append('<p class="event-name-item">' + eventName + '</p>')
     $('.event-link').append('<p><a href="' + eventURL + '">' + eventURLText + '</a></p>')
-    $('.event-time').append('<p class="event-time-item">' + eventDatetime + '</p>')
+    $('.event-time').append('<p class="event-time-item">' + datetimeConvert(eventDatetime) + '</p>')
   }
 })
