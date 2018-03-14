@@ -38,3 +38,8 @@ $.ajax({
     console.log(response.events)
     console.log(response.events[0].start.local)
 })
+
+
+$('#map').on('click', function(event){
+  console.log(event)
+})
