@@ -1,6 +1,7 @@
-var userInput = 'california'
+var stateName =  sessionStorage.getItem("stateName")
+var picsURL = 'https://api.unsplash.com/search/photos/?client_id=e57d42fef842c3fe03fbb0428521a75bcfd2560a352eeb229643ad1c0d0469f6&query=' + stateName;
 
-var picsURL = 'https://api.unsplash.com/search/photos/?client_id=e57d42fef842c3fe03fbb0428521a75bcfd2560a352eeb229643ad1c0d0469f6&query=' + userInput;
+console.log('unsplash: ' + stateName)
 
 $.ajax({
     url: picsURL,
