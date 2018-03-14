@@ -5,15 +5,14 @@ var isLoggedIn
 // Login functionality
 $('#signInBtn').on('click', function(event){
   event.preventDefault();    
-  
-  console.log('hi')
-  
+  // user input
   var email = $('#Form-email1').val().trim()
   var pass = $('#Form-pass1').val().trim()
-  
+  // firebase sign in
   var auth = firebase.auth() 
   var promise = auth.signInWithEmailAndPassword(email, pass)
 
+  // If successful, return to main landing page
   promise.then(function(){
     window.location = './index.html'
   })
@@ -34,12 +33,9 @@ firebase.auth().onAuthStateChanged(function(firebaseUser){
   if (firebaseUser) {
     isLoggedIn = true
     $('#loginBtn').css('display', 'none')
-    console.log(firebaseUser)
   } else {
     isLoggedIn = false
     $('#loginBtn').css('display', 'inital')
-    console.log('not signed in')
-
   }
 })
 
