@@ -11,7 +11,8 @@ Travi aims to bridge the gap and support users who desire to travel by providing
 * Login feature to support saving/bookmarking 
 
 ## Technologies Used
-* Bootstrap 3.3.7
+* Bootstrap 4.0.0
+* Material Design
 * Firebase
 * [Data Maps Library](http://datamaps.github.io/)
 * [Instagram API](https://www.instagram.com/developer/)
