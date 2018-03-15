@@ -5,55 +5,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap Main -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+        <!-- Bootstrap core CSS -->
+	<link href="assets/Material Design for Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap CSS -->
+	<link href="assets/Material Design for Bootstrap/css/mdb.min.css" rel="stylesheet">
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Shrikhand" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <!-- Index2 Stylesheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+    <!-- Favicon -->
+    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <link rel="stylesheet" href="assets/css/component.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/usmap/main.css">
+    <!-- Icomoon -->
+    <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+    <!-- Modernizr -->
+    <script src="assets/js/modernizr.custom.js"></script>
 
     <title>Travi</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-text">
-            Placeholder Navbar
-        </span>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            <div class="banner col-md-10">
-                <p class="current-state">Oregon</p>
-            </div>
-        </div>
-
-
-        <div class="row events">
-            <div class="col-md-4 event-title event-info event-name">Event</div>
-            <div class="col-md-5 event-title event-info event-link">Event URL</div>
-            <div class="col-md-3 event-title event-info event-time">Date/Time</div>
-        </div>
-
-
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <div class="w3-content w3-display-container">
-                        <img class="mySlides" id="pic1">
-                        <img class="mySlides" id="pic2">
-                        <img class="mySlides" id="pic3">
-                        <img class="mySlides" id="pic4">
-                        <img class="mySlides" id="pic5">
-                        <button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
-                        <button class="button-right" onclick="plusDivs(1)">&#10095;</button>
-                        <div class="col-md-3"></div>
+		<ul id="gn-menu" class="gn-menu-main">
+                <li class="gn-trigger">
+                    <a class="gn-icon gn-icon-menu">
+                        <span>Menu</span>
+                    </a>
+                    <nav class="gn-menu-wrapper">
+                        <div class="gn-scroller">
+                            <ul class="gn-menu">
+                                <li class="gn-search-item">
+                                    <input placeholder="Search" type="search" class="gn-search">
+                                    <a class="gn-icon gn-icon-search">
+                                        <span>Search</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="gn-icon gn-icon-download">Dashboard</a>
+                                    <ul class="gn-submenu">
+                                        <li>
+                                            <a class="gn-icon gn-icon-badge">Rewards</a>
+                                        </li>
+                                        <li>
+                                            <a class="gn-icon gn-icon-users2">Community</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="gn-icon gn-icon-cog">Settings</a>
+                                </li>
+                                <li>
+                                    <a class="gn-icon gn-icon-help">Help</a>
+                                </li>
+                                <li>
+                                    <a class="gn-icon gn-icon-archive">Favorites</a>
+                                    <ul class="gn-submenu">
+                                        <li>
+                                            <a class="gn-icon gn-icon-article">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a class="gn-icon gn-icon-pictures">Images</a>
+                                        </li>
+                                        <li>
+                                            <a class="gn-icon gn-icon-videos">Videos</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /gn-scroller -->
+                    </nav>
+                </li>
+                <li>
+                    <img src="assets/images/global-movement-logo.png" alt="Logo">
+                    <a href="index.html">Travi</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" id="Preview" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img class="round-la" width="60" height="60" avatar="Jeremie">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="Preview">
+                        <a class="dropdown-item" href="dashboard.html">Dashboard</a>
+                        <a class="dropdown-item" href="#">Messages</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Languages</a>
+                        <a class="dropdown-item" id="logoutBtn" href="#">Logout</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="text-center" id="loginBtn" href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm">Log in | Sign up</a>
+                </li>
+    
+            </ul>
+    
+            <!-- Login modal -->
+            <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <!--Content-->
+                    <div class="modal-content form-elegant">
+                        <!--Header-->
+                        <div class="modal-header text-center">
+                            <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel">
+                                <strong>Log in</strong>
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--Body-->
+                        <div class="modal-body mx-4">
+                            <!--Body-->
+                            <p id="login-error"></p>
+                            <div class="md-form mb-5">
+                                <input type="email" id="Form-email1" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
+                            </div>
+    
+                            <div class="md-form pb-3">
+                                <input type="password" id="Form-pass1" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
+                                <p class="font-small blue-text d-flex justify-content-end">Forgot
+                                    <a href="#" class="blue-text ml-1"> Password?</a>
+                                </p>
+                            </div>
+    
+                            <div class="text-center mb-3">
+                                <button type="button" class="btn btn-cyan btn-block btn-rounded z-depth-1a" id="signInBtn">Sign in</button>
+                            </div>
+                            <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in with:</p>
+    
+                            <div class="row my-3 d-flex justify-content-center">
+                                <!--Facebook-->
+                                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a">
+                                    <i class="fa fa-facebook text-center"></i>
+                                </button>
+                                <!--Twitter-->
+                                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a">
+                                    <i class="fa fa-twitter"></i>
+                                </button>
+                                <!--Google +-->
+                                <button type="button" class="btn btn-white btn-rounded z-depth-1a">
+                                    <i class="fa fa-google-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!--Footer-->
+                        <div class="modal-footer mx-5 pt-3 mb-1">
+                            <p class="font-small grey-text d-flex justify-content-end">Not a member?
+                                <a href="#" class="blue-text ml-1"> Sign Up</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--/.Content-->
+                </div>
+                <!-- User Not Logged In Modal -->
+                <div class="modal fade" id="userNotLoggedIn">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">User Not Logged In</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Please Login To Continue</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+    <!-- State Banner -->
+<div class="container">
+    <div class="row">
+            <div class="banner col-md-10">
+                <p class="current-state"><i class="fas fa-map-marker-alt"></i> California</p>
+            </div>
         </div>
-    </div>
 
+        <!-- Event Titles -->
+        <div class="row events">
+            <div class="col-md-4 event-info event-name">
+                <p class="event-title"><i class="fab fa-hotjar"></i> Event</p>
+            </div>
+            <div class="col-md-5 event-info event-link">
+                    <p class="event-title"><i class="fas fa-link"></i> Event URL</p>
+                </div>
+            <div class="col-md-3 event-info event-time">
+                    <p class="event-title"><i class="far fa-clock"></i> Date/Time</p>
+                </div>
+        </div>
+
+        <!-- Image Display -->
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="w3-content w3-display-container">
+                    <img class="mySlides" id="pic1">
+                    <img class="mySlides" id="pic2">
+                    <img class="mySlides" id="pic3">
+                    <img class="mySlides" id="pic4">
+                    <img class="mySlides" id="pic5">
+                    <button class="button-left" onclick="plusDivs(-1)"><i class="fas fa-chevron-circle-left"></i></button>
+                    <button class="button-right" onclick="plusDivs(1)"><i class="fas fa-chevron-circle-right"></i></button>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+                <span class="footer-text">Made with <span class="heart">&#9829;</span> by Travi.</span>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- SCRIPTS -->
+    <!-- Classie, GnMenu -->
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
@@ -83,7 +269,7 @@
 
     <script src="assets/js/eventbrite.js"></script>
 
-<script src="assets/js/unsplash.js"></script>
+    <script src="assets/js/unsplash.js"></script>
 
 </body>
 
