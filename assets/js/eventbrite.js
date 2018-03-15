@@ -10,6 +10,9 @@ function datetimeConvert(datetime){
   return date + ' @' + time //return formatted datetime
 }
 
+// push state name to headerß
+$('.current-state').text(stateName)
+
 $.ajax({
   url : queryURL,
   method : "GET"
@@ -26,7 +29,7 @@ $.ajax({
       eventURL = response.events[i].url
       eventURLText = response.events[i].url
     }
-    
+
     // Add properties to coressponding html columns
     $('.event-name').append('<p class="event-name-item">' + eventName + '</p>')
     $('.event-link').append('<p><a href="' + eventURL + '">' + eventURLText + '</a></p>')
