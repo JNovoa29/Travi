@@ -26,7 +26,7 @@ Travi aims to bridge the gap between travel planning and travel agency and suppo
 * Translator
 * Messaging
 * Bookmarking
-* Tradable rewards system
+* Rewards system
 * Community platform
 * Blog | Point-of-Interest boons
 
