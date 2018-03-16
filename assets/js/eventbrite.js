@@ -19,7 +19,7 @@ $.ajax({
 }).then( function(response){
 
   for (var i = 0 ; i < response.events.length ; i++){
-    var eventName = response.events[i].name.text
+    var eventName = response.events[i].name.textß
     var eventDatetime = response.events[i].start.local
     var eventURL = response.events[i].vanity_url
     var eventURLText = eventURL
