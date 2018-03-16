@@ -46,7 +46,7 @@
 								</a>
 							</li>
 							<li>
-								<a class="gn-icon gn-icon-download" href="activity-dashboard.html">Dashboard</a>
+								<a class="gn-icon gn-icon-download">Dashboard</a>
 								<ul class="gn-submenu">
 									<li>
 										<a class="gn-icon gn-icon-badge">Rewards</a>
@@ -57,7 +57,7 @@
 								</ul>
 							</li>
 							<li>
-								<a class="gn-icon gn-icon-cog" href="terms.html">Settings | Terms</a>
+								<a class="gn-icon gn-icon-cog">Settings</a>
 							</li>
 							<li>
 								<a class="gn-icon gn-icon-help">Help</a>
@@ -67,6 +67,12 @@
 								<ul class="gn-submenu">
 									<li>
 										<a class="gn-icon gn-icon-article">Blog</a>
+									</li>
+									<li>
+										<a class="gn-icon gn-icon-pictures">Images</a>
+									</li>
+									<li>
+										<a class="gn-icon gn-icon-videos">Videos</a>
 									</li>
 								</ul>
 							</li>
@@ -84,7 +90,7 @@
 					<img class="round-la" width="60" height="60" avatar="Jeremie">
 				</a>
 				<div class="dropdown-menu" aria-labelledby="Preview">
-					<a class="dropdown-item" href="activity-dashboard.html">Activity</a>
+					<a class="dropdown-item" href="dashboard.html">Activity</a>
 					<a class="dropdown-item" href="#">Messages</a>
 					<div class="dropdown-divider"></div>
 					<a class="dropdown-item" href="#">Languages</a>
@@ -160,7 +166,7 @@
 
 		<!-- header -->
 		<header style="background-image: url(https://mdbootstrap.com/img/Photos/Others/images/77.jpg)">
-			<h1>Exploring events in the United States just got easier.
+			<h1>Exploring the United States just got easier.
 				<span>Plan your day like magic.</span>
 			</h1>
 		</header>
@@ -242,9 +248,7 @@
 			<path id="path67" fill="none" stroke="#A9A9A9" stroke-width="2" d="M385,593v55l36,45 M174,525h144l67,68h86l53,54v46" />
 		</svg>
 		<!-- End of US map -->
-	</div>
-<br>
-	
+
 		<!-- SCRIPTS -->
 		<!-- Classie, GnMenu -->
 		<script src="assets/js/classie.js"></script>

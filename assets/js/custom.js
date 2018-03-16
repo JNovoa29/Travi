@@ -1,86 +1,9 @@
-/*
-Template Name: Material Pro Admin
-Author: Themedesigner
-Email: niravjoshi87@gmail.com
-File: js
-*/
-$(function() {
+$(function () {
     "use strict";
-    $(function() {
+    $(function () {
         $(".preloader").fadeOut();
     });
 
-    // ============================================================== 
-    // This is for the top header part and sidebar part
-    // ==============================================================  
-    var set = function() {
-        var width = (window.innerWidth > 0) ? window.innerWidth : this.screen.width;
-        var topOffset = 70;
-        if (width < 1170) {
-            $("body").addClass("mini-sidebar");
-            $('.navbar-brand span').hide();
-            $(".scroll-sidebar, .slimScrollDiv").css("overflow-x", "visible").parent().css("overflow", "visible");
-            $(".sidebartoggler i").addClass("ti-menu");
-        } else {
-            $("body").removeClass("mini-sidebar");
-            $('.navbar-brand span').show();
-            //$(".sidebartoggler i").removeClass("ti-menu");
-        }
-
-        var height = ((window.innerHeight > 0) ? window.innerHeight : this.screen.height) - 1;
-        height = height - topOffset;
-        if (height < 1) height = 1;
-        if (height > topOffset) {
-            $(".page-wrapper").css("min-height", (height) + "px");
-        }
-    };
-    $(window).ready(set);
-    $(window).on("resize", set);
-
-    // topbar stickey on scroll
-    $(".fix-header .topbar").stick_in_parent({});
-
-    // this is for close icon when navigation open in mobile view
-    $(".nav-toggler").click(function() {
-        $("body").toggleClass("show-sidebar");
-        $(".nav-toggler i").toggleClass("ti-menu");
-        $(".nav-toggler i").addClass("ti-close");
-    });
-    $(".sidebartoggler").on('click', function() {
-        //$(".sidebartoggler i").toggleClass("ti-menu");
-    });
-    $(".search-box a, .search-box .app-search .srh-btn").on('click', function() {
-        $(".app-search").toggle(200);
-    });
-
-    // ============================================================== 
-    // Auto select left navbar
-    // ============================================================== 
-    $(function() {
-        var url = window.location;
-        var element = $('ul#sidebarnav a').filter(function() {
-            return this.href == url;
-        }).addClass('active').parent().addClass('active');
-        while (true) {
-            if (element.is('li')) {
-                element = element.parent().addClass('in').parent().addClass('active');
-            } else {
-                break;
-            }
-        }
-    });
-    // ============================================================== 
-    //tooltip
-    // ============================================================== 
-    $(function() {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-        // ============================================================== 
-        // Sidebarmenu
-        // ============================================================== 
-    $(function() {
-        $('#sidebarnav').metisMenu();
-    });
     // ============================================================== 
     // Slimscrollbars
     // ============================================================== 
@@ -95,3 +18,29 @@ $(function() {
     // ============================================================== 
     $("body").trigger("resize");
 });
+
+// ============================================================== 
+// US map
+// ============================================================== 
+$("path, circle").hover(function (e) {
+    $('#info-box').css('display', 'block');
+    $('#info-box').html($(this).data('info'));
+});
+
+$("path, circle").mouseleave(function (e) {
+    $('#info-box').css('display', 'none');
+});
+
+$(document).mousemove(function (e) {
+    $('#info-box').css('top', e.pageY - $('#info-box').height() - 30);
+    $('#info-box').css('left', e.pageX - ($('#info-box').width()) / 2);
+}).mouseover();
+
+var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if (ios) {
+    $('a').on('click touchend', function () {
+        var link = $(this).attr('href');
+        window.open(link, '_blank');
+        return false;
+    });
+}
